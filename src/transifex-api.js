@@ -28,10 +28,10 @@ let TransifexApi = {
   **/
 
  connect(options) {
-   this.username = options.username;
-   this.password = options.password;
-   this.base_url = options.base_url || 'https://www.transifex.com/';
-   this.api_prefix = options.api_prefix || 'api/2';
+   this.username = options.tx_user;
+   this.password = options.tx_pass;
+   this.base_url = options.tx_base_url || 'https://www.transifex.com/';
+   this.api_prefix = options.tx_api_prefix || 'api/2';
    this.urls = urlMap(`${this.base_url}${this.api_prefix}`);
    return this;
  },
