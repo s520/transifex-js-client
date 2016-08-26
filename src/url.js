@@ -1,4 +1,4 @@
-export default function(api) {
+module.exports = function(api) {
   return {
     projects:           `${api}/projects`,
     project:            `${api}/project/<project_slug>`,

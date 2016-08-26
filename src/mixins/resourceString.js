@@ -4,7 +4,7 @@
  * @module mixins/project
  */
 
-export default {
+module.exports = {
 
   /**
    * Retrieve the details of a specific source string
@@ -37,7 +37,7 @@ export default {
        comment: 'This is a comment'
      })
   **/
-  
+
   resourceStringUpdate(project_slug, resource_slug, source_string, form) {
     source_string = this.strToHash(source_string);
     var path = this.urls['resourceString']

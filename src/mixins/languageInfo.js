@@ -3,7 +3,7 @@
  * supported by Transifex, as well a details objects for each supported language.
  * @module mixins/languageInfo
  */
-export default {
+ module.exports = {
 
   /**
    * Retrieve the list of languages supported by Transifex.

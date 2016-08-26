@@ -1,4 +1,4 @@
-import TransifexApi from '../src/transifex-api.js';
+var TransifexApi = require('../src/transifex-api.js');
 
 global.txApi = TransifexApi.connect({
   tx_user: 'alexapi1',

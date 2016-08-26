@@ -1,18 +1,18 @@
-import Promise from 'promise';
-import superagent from 'superagent';
-import superagentpromise from 'superagent-promise';
-import objectAssign from 'object-assign';
+var Promise = require('promise');
+var superagent = require('superagent');
+var superagentpromise = require('superagent-promise');
+var objectAssign = require('object-assign');
 
-import urlMap from './url.js';
-import md5 from './md5.js';
+var urlMap = require('./url.js');
+var md5 = require('./md5.js');
 
-import projectMixin from './mixins/project';
-import resourceMixin from './mixins/resource';
-import resourceStringMixin from './mixins/resourceString';
-import languageMixin from './mixins/language';
-import translationMixin from './mixins/translation';
-import languageInfoMixin from './mixins/languageInfo';
-import translationStringMixin from './mixins/translationString';
+var projectMixin = require('./mixins/project.js');
+var resourceMixin = require('./mixins/resource.js');
+var resourceStringMixin = require('./mixins/resourceString.js');
+var languageMixin = require('./mixins/language.js');
+var translationMixin = require('./mixins/translation.js');
+var languageInfoMixin = require('./mixins/languageInfo.js');
+var translationStringMixin = require('./mixins/translationString.js');
 
 /**
  * Implements a client to the Transifex Api
@@ -43,7 +43,7 @@ let TransifexApi = {
 TransifexApi.request = superagentpromise(superagent, Promise);
 TransifexApi.md5 = md5;
 
-TransifexApi = objectAssign(TransifexApi,
+module.exports = objectAssign(TransifexApi,
  projectMixin,
  resourceMixin,
  resourceStringMixin,
@@ -52,5 +52,3 @@ TransifexApi = objectAssign(TransifexApi,
  languageInfoMixin,
  translationStringMixin
 )
-
-export default TransifexApi

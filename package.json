@@ -7,7 +7,7 @@
     "build": "rimraf dist && webpack",
     "coverage": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- -t 6000 mocha.config.js tests/*.js && open coverage/index.html",
     "test": "npm run test-node && npm run test-browser",
-    "test-node": "mocha  --recursive --bail --require babel-core/register -t 6000 --reporter spec mocha.config.js tests/*.js",
+    "test-node": "mocha  --recursive --bail  -t 6000 --reporter spec mocha.config.js tests/*.js",
     "test-browser": "karma start --single-run",
     "tdd": "karma start",
     "jsdoc": "node_modules/jsdoc/jsdoc.js -r src/ -d docs --readme readme.md && open docs/index.html"

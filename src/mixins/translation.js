@@ -1,4 +1,4 @@
-import Promise from 'promise';
+var Promise = require('promise');
 
 /**
  * The translation mixin is responsible for retrieving and uploading translation
@@ -6,7 +6,7 @@ import Promise from 'promise';
  * @module mixins/translation
  */
 
-export default {
+module.exports = {
 
   /**
    * Retrieve a resource translation for the given language and project

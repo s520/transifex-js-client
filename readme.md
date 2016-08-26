@@ -1,9 +1,11 @@
 # transifex-api
 
-This is a universal module (works on browser and server) that implements a client
-for the Transifex API. It is written in ES6 that it transpiled through babel and
-webpack to a regular universal javascript module. The client is Promise based and
-has no external dependencies as AJAX is handled through superagent.
+This is a universal codebase (works on browser and server) that implements a client
+for the Transifex API. It is written in ES6 and it can be used either as a Node
+module by linking the src directory or as browser api client by building the codebase
+through webpack and using the minified js file in the dist folder.
+
+The client is Promise based and has no external dependencies as AJAX is handled through superagent.
 
 ## Installation
 
@@ -31,12 +33,14 @@ var txApi = TransifexApi.connect(username, password);
 
 Install dependencies: `npm install`
 
-- `npm run build` - Build task that generates both minified and non-minified scripts;
+- `npm run build` - Build task that generates the browser library;
 - `npm run test-node` - Run Mocha tests once server side;
 - `npm run test-browser` - Run Mocha tests in the browser using Karma once;
 - `npm run test` - Shortcut for `npm run test-node && npm run test-browser`;
 - `npm run tdd` - Run Mocha tests & watch files for changes;
 - `npm run coverage` - Run Isparta, a code coverage tool;
+- `npm run jsdoc` - Generate documentation;
+
 
 [travis-url]: https://travis-ci.org/alexpsi/transifex-api
 [travis-image]: https://img.shields.io/travis/alexpsi/transifex-api.svg?style=flat-square
