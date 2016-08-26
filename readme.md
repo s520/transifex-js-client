@@ -12,21 +12,45 @@ The client is Promise based and has no external dependencies as AJAX is handled 
 Not yet
 
 ```
-$ npm install --save transifex-api
+npm install --save transifex-api
 ```
+
+Until its published you can use it as follows:
+
+```
+git clone https://github.com/transifex/transifex-js-client
+cd transifex-js-client
+npm link
+```
+
+And inside your app:
+
+```
+cd myApp
+npm link transifex-js-client
+```
+
 
 ## Usage
 
 In node:
 
 ```js
-var txApi = require('transifex-api').connect(username, password);
+var txApi = require('transifex-js-client').connect({
+  tx_user: '',
+  tx_pass: '',
+  tx_base_url: 'http://tx.loc:8000/',
+})
 ```
 
 In browser:
 
 ```js
-var txApi = TransifexApi.connect(username, password);
+var txApi = TransifexApi.connect({
+  tx_user: '',
+  tx_pass: '',
+  tx_base_url: 'http://tx.loc:8000/',
+});
 ```
 
 ## Development

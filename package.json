@@ -1,8 +1,8 @@
 {
-  "name": "transifex-api",
+  "name": "transifex-js-client",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/transifex-api.min.js",
+  "main": "src/transifex-api.js",
   "scripts": {
     "build": "rimraf dist && webpack",
     "coverage": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- -t 6000 mocha.config.js tests/*.js && open coverage/index.html",
@@ -31,7 +31,6 @@
     "dedupe-plugin": "^1.0.0",
     "eslint": "^1.4.1",
     "eslint-plugin-babel": "^3.1.0",
-    "husky": "^0.10.1",
     "isparta": "^4.0.0",
     "jsdoc": "^3.4.0",
     "karma": "^0.13.14",
