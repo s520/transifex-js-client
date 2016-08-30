@@ -16,5 +16,8 @@ module.exports = function(api) {
     translation:        `${api}/project/<project_slug>/resource/<resource_slug>/translation/<language_code>`,
     translationStrings: `${api}/project/<project_slug>/resource/<resource_slug>/translation/<language_code>/strings`,
     translationString:  `${api}/project/<project_slug>/resource/<resource_slug>/translation/<language_code>/string/<string_hash>`,
+
+    stats: `${api}/project/<project_slug>/resource/<resource_slug>/stats`,
+    stat: `${api}/project/<project_slug>/resource/<resource_slug>/stats/<lang_code>`,
   }
 }

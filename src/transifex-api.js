@@ -13,6 +13,7 @@ var languageMixin = require('./mixins/language.js');
 var translationMixin = require('./mixins/translation.js');
 var languageInfoMixin = require('./mixins/languageInfo.js');
 var translationStringMixin = require('./mixins/translationString.js');
+var statMixin = require('./mixins/stat.js');
 
 /**
  * Implements a client to the Transifex Api
@@ -50,5 +51,6 @@ module.exports = objectAssign(TransifexApi,
  languageMixin,
  translationMixin,
  languageInfoMixin,
- translationStringMixin
+ translationStringMixin,
+ statMixin
 )
