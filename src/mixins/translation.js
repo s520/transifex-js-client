@@ -22,21 +22,11 @@ module.exports = {
       .replace('<resource_slug>', resource_slug)
       .replace('<language_code>', language_code);
 
-    var that = this;
-    return new Promise(function(resolve, reject) {
-      that.request
-        .get(path)
-        .auth(that.username, that.password)
-        .type('application/json')
-        .end(function(err, res) {
-          /* istanbul ignore next */
-          if (err) return reject(err);
-          if (res.body && res.body.content) {
-            res.body.content = JSON.parse(res.body.content);
-          }
-          return resolve(res)
-        })
-    })
+    return this.request
+      .get(path)
+      .auth(this.username, this.password)
+      .type('application/json')
+      .end()
   },
 
   /**
