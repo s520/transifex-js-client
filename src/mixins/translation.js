@@ -20,7 +20,7 @@ module.exports = (axios, urls) => ({
       replace('<language_code>', language_code);
     return axios.get(path, {
       transformResponse: [function(data) {
-        return JSON.parse((JSON.parse(data)).content);
+        return (JSON.parse(data)).content;
       }],
     });
   },
