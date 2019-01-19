@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "blueimp-md5": "^2.6.0"
+    "blueimp-md5": "^2.6.0",
+    "extend": "^3.0.2"
   }
 }
